@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ</title>
+    <link rel="stylesheet" href="Bài 3.html">
+</head>
+<body>
+      
+    <div class="container">
+      <h1>Laptop dành cho học trực tuyến</h1>
+      <p>Do ảnh hưởng của đại dịch COVID trong năm học này, nhiều sinh viên ở một số tỉnh, thành phố như Hà Nội đã phải chuyển sang học trực tuyến để đảm bảo sức khỏe và an toàn cho mình.</p>
+      
+      <div class="laptop-container">
+        <div class="laptop">
+                <img src="Surface-Laptop-3-03-e1660549523232.jpg" alt="Surface Laptop 3">
+                <p>Model: ABC123</p>
+                <p>RAM: 8GB</p>
+                <p>Ổ cứng: 256GB SSD</p>
+                <a href="#" class="read-more">Đọc tiếp</a>
+         </div>
+        <div class="laptop">
+          <img src="nb stop minas.jpg" alt="Laptop Samsung X180 Barbie">
+          <p>Model: XYZ456</p>
+          <p>RAM: 16GB</p>
+          <p>Ổ cứng: 512GB SSD</p>
+          <a href="#" class="read-more">Đọc tiếp</a>
+        </div>
+        <div class="laptop">
+          <img src="thinkpad.jpg" alt="ThinkPad X1 Carbon Gen 9">
+          <p>Model: DEF789</p>
+          <p>RAM: 12GB</p>
+          <p>Ổ cứng: 1TB HDD</p>
+          <a href="#" class="read-more">Đọc tiếp</a>
+        </div>
+      </div>
+    </div>
+    
+    <section id="contact">
+        <h1>LIÊN HỆ</h1>
+        <div id="top-color-splash"></div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Thông tin</h2>
+                <div class="info">
+                    <i class="fa fa-map-marker"></i>
+                    <p>  
+                        <figure>
+                            <img src="iconmap.png" style =" width: 35px;"> Gò Vấp Tp. HCM
+                           <p>
+                            <img src="dt.png" style = " width: 35px;">    (+84) 123456789
+                           </p> 
+                           <p>
+                            <img src="thu.jpg" style =" width: 33px;">    iuh@edu.vn
+                           </p>
+                        </figure>
+                </div>
+                <div class="info">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                
+            </div>
+            <div class="contact-form">
+                <h3>Hãy liên lạc với chúng tôi bất cứ khi nào!</h3>
+                <form action="#" onsubmit="return confirmFormSubmit();">
+                    <label for="fullname">Họ và tên:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Nhập họ và tên">
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Nhập email">
+                    <br>
+                    <label for="phone">Số điện thoại:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại">
+                    <br>
+                    <label for="message">Nội dung:</label>
+                    <textarea id="message" name="message" rows="5" placeholder=""></textarea>
+                    <br>
+                    <button type="submit">Gửi</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+    function confirmFormSubmit() {
+        var name = document.getElementById("fullname").value;
+        var email = document.getElementById("email").value;
+        var phoneNumber = document.getElementById("phone").value;
+        var feedback = document.getElementById("message").value;
+
+        var message = "Thông tin của bạn:\n\n" +
+            "Họ và tên: " + name + "\n" +
+            "Email: " + email + "\n" +
+            "Số điện thoại: " + phoneNumber + "\n" +
+            "Nội dung góp ý: " + feedback;
+
+        if (confirm(message)) {
+            // If user confirms, submit the form
+            return true;
+        } else {
+            // If user cancels, prevent form submission
+            return false;
+        }
+    }
+    </script>
+    </body>
+    </html>
