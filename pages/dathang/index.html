@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TNL Clothing</title>
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/dathang.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../../css/fontawesome-free-6.4.2-web/css/all.css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.css" />
+    <!-- <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'> -->
+    <script type="text/javascript" src="../../js/index.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header id="header" class="site-header">
+      <div class="sub-action sub-action-cart">
+        <div class="top-action">
+          <div type="button" class="btn-close" onclick="closeCart()">
+            <i class="fa-solid fa-x">x</i>
+          </div>
+          <h3>Giỏ hàng</h3>
+          <span class="number-cart">2</span>
+        </div>
+
+        <div class="main-action">
+          <!-- item cart -->
+          <div class="item-product-cart d-flex">
+            <div class="thumb-product-cart">
+              <img src="../../assets/img/products/Set áo chân váy đen 1.jpg" alt="" class="lazy" />
+            </div>
+
+            <div class="info-product-cart">
+              <h3>
+                <a href="#"> Set áo + chân váy đen </a>
+              </h3>
+              <div class="info-properties d-flex">
+                <p class="properties-color">Màu sắc: <span style="color: #000">Đen</span></p>
+                <p>Size: <span style="text-transform: uppercase">m</span></p>
+              </div>
+              <div class="info-price-mini d-flex">
+                <div class="info-price-quantity d-flex">
+                  <div class="price-quantity-minus price-quantity">
+                    <i class="fa-solid fa-minus"></i>
+                  </div>
+                  <input type="number" value="1" data-product-sub-id="186719" data-product-index="0" />
+                  <div class="price-quantity-plus price-quantity">
+                    <i class="fa-solid fa-plus"></i>
+                  </div>
+                </div>
+                <div class="price-cart-mini">
+                  <ins>
+                    <span> 1.290.000₫ </span>
+                  </ins>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- item cart -->
+          <div class="item-product-cart d-flex">
+            <div class="thumb-product-cart">
+              <img src="../../assets/img/products/đầm dự tiệc 3.jpg" alt="" class="lazy" />
+            </div>
+
+            <div class="info-product-cart">
+              <h3>
+                <a href="#"> Đầm dự tiệc </a>
+              </h3>
+              <div class="info-properties d-flex">
+                <p class="properties-color">Màu sắc: <span style="color: #000">Đen</span></p>
+                <p>Size: <span style="text-transform: uppercase">m</span></p>
+              </div>
+              <div class="info-price-mini d-flex">
+                <div class="info-price-quantity d-flex">
+                  <div class="price-quantity-minus price-quantity">
+                    <i class="fa-solid fa-minus"></i>
+                  </div>
+                  <input type="number" value="1" data-product-sub-id="186719" data-product-index="0" />
+                  <div class="price-quantity-plus price-quantity">
+                    <i class="fa-solid fa-plus"></i>
+                  </div>
+                </div>
+                <div class="price-cart-mini">
+                  <ins>
+                    <span> 1.490.000₫ </span>
+                  </ins>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-action">
+          <!-- <input type="hidden" name="total_price_not_format" value="5158000"> -->
+          <div class="total-price">Tổng cộng: <strong>2.780.000đ</strong></div>
+          <div class="box-action">
+            <a href="#" class="action-view-cart">Xem giỏ hàng</a>
+            <a href="#" class="action-login">Đăng nhập</a>
+          </div>
+        </div>
+      </div>
+      <div class="container d-flex">
+        <nav class="main-menu">
+          <!-- nav -->
+          <ul class="menu">
+            <li>
+              <a href="#">TNL CLOTHING</a>
+              <ul class="sub-menu">
+                <div class="cat-sub-menu">
+                  <div>
+                    <a href="#"> NEW ARRIVAL </a>
+                  </div>
+
+                  <div>
+                    <a href="#"> TNL CLOTHING YOU </a>
+                  </div>
+
+                  <div>
+                    <a href="#"> EXPRESS - FALL/WINTER 2023 COLLECTION </a>
+                  </div>
+
+                  <div>
+                    <a href="#"> DELICATE URBAN </a>
+                  </div>
+
+                  <div>
+                    <a href="#"> REFINED - NEW COLLECTION FW2023 </a>
+                  </div>
+                </div>
+
+                <div class="list-submenu d-flex">
+                  <div class="item-list-submenu">
+                    <h3><a href="./sanpham/index.html">SHIRT</a></h3>
+                    <ul>
+                      <li>
+                        <a href="./sanpham/index.html">Shirt</a>
+                      </li>
+                      <li>
+                        <a href="./sanpham/index.html">T-Shirt</a>
+                      </li>
+                      <li>
+                        <a href="./sanpham/index.html">Crop-top Shirt</a>
+                      </li>
+                      <li>
+                        <a href="./sanpham/index.html">Vest/ blazer</a>
+                      </li>
+                      <li>
+                        <a href="./sanpham/index.html" >Sweater</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="item-list-submenu">
+                    <h3><a href="">JACKET</a></h3>
+                    <ul>
+                      <li>
+                        <a href="./sanpham/index.html">Jacket</a>
+                      </li>
+                      <li>
+                        <a href="./sanpham/index.html">Evening gown</a>
+                      </li>
+                      <li>
+                        <a href="./sanpham/index.html">Life jacket</a>
+                      </li>
+                      <li>
+                        <a href="./sanpham/index.html">Cloak</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="item-list-submenu">
+                    <h3><a href="./sanpham/index.html">TROUSERS &amp; JUMPSUIT</a></h3>
+                    <ul>
+                      <li>
+                        <a href="./sanpham/index.html">Jeans</a>
+                      </li>
+                      <li>
+                        <a href="./sanpham/index.html">Short</a>
+                      </li>
+                      <li>
+                        <a href="./sanpham/index.html">Baggy pants</a>
+                      </li>
+                      <li>
+                        <a href="./sanpham/index.html">Jumpsuit</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="item-list-submenu">
+                    <h3><a href="./sanpham/index.html">SKIRT</a></h3>
+                    <ul>
+                      <li>
+                        <a href="./sanpham/index.html">Skirt</a>
+                      </li>
+                      <li>
+                        <a href="./sanpham/index.html">Pleated skirt</a>
+                      </li>
+                      <li>
+                        <a href="./sanpham/index.html">A-line skirt</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="item-list-submenu">
+                    <h3><a href="./sanpham/index.html">DRESS</a></h3>
+                    <ul>
+                      <li>
+                        <a href="./sanpham/index.html">Dress</a>
+                      </li>
+                      <li>
+                        <a href="./sanpham/index.html">Maxi dress</a>
+                      </li>
+                      <li>
+                        <a href="./sanpham/index.html">Prom dress</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="item-list-submenu">
+                    <h3><a href="">ACCESSORY</a></h3>
+                    <ul>
+                      <li>
+                        <a href="./sanpham/index.html">Bag/ Wallet</a>
+                      </li>
+                      <li>
+                        <a href="./sanpham/index.html">Footwear &amp; Sandals</a>
+                      </li>
+                      <li>
+                        <a href="./sanpham/index.html">Accessory</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">LIFESTYLE</a>
+            </li>
+            <li>
+              <a href="#">ABOUT</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- brand -->
+        <div class="site-brand">
+          <a href="/pages/index.html">
+            <img src="../../assets/img/logo/5_preview_rev_1 (1).png" alt="Trang chủ | TNL Clothing" />
+          </a>
+        </div>
+
+        <!-- right header -->
+        <div class="right-header">
+          <form class="search-form">
+            <button type="button">
+              <i class="fa fa-search"></i>
+            </button>
+            <input
+              id="search-quick"
+              type="text"
+              name="q"
+              placeholder="SEARCH PRODUCT"
+              autocomplete="off"
+              minlength="1"
+            />
+            <div class="quick-search">
+              <div class="item-searchs">
+                <h4>Most searched</h4>
+                <div class="item-side-size">
+                  <label class="item-sub-list po-relative mb-2">
+                    <a href="./" class="item-sub-title">Dress</a>
+                  </label>
+                  <label class="item-sub-list po-relative mb-2">
+                    <a href="./assets/img/products/đầm cánh bướm 1.jpg" class="item-sub-title">Vest</a>
+                  </label>
+                  <label class="item-sub-list po-relative mb-2">
+                    <a href="./assets/img/products/đầm cánh bướm 2.jpg" class="item-sub-title">Jeans</a>
+                  </label>
+                  <label class="item-sub-list po-relative mb-2">
+                    <a href="./sanpham/index.html" class="item-sub-title">Maxi dress</a>
+                  </label>
+                </div>
+              </div>
+
+              <div class="item-searchs">
+                <h4>Near by</h4>
+                <div class="item-side-size">
+                  <label class="item-sub-list po-relative mb-2">
+                    <a href="./sanpham/index.html" class="item-sub-title">Dress</a>
+                  </label>
+                  <label class="item-sub-list po-relative mb-2">
+                    <a href="./sanpham/index.html" class="item-sub-title">Vest</a>
+                  </label>
+                  <label class="item-sub-list po-relative mb-2">
+                    <a href="./sanpham/index.html" class="item-sub-title">Jeans</a>
+                  </label>
+                  <label class="item-sub-list po-relative mb-2">
+                    <a href="./sanpham/index.html" class="item-sub-title">Bag</a>
+                  </label>
+                  <label class="item-sub-list po-relative mb-2">
+                    <a href="./sanpham/index.html" class="item-sub-title">Maxi dress</a>
+                  </label>
+                  <label class="item-sub-list po-relative mb-2">
+                    <a href="./sanpham/index.html" class="item-sub-title">Skirt</a>
+                  </label>
+                  
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <div class="header-actions">
+            <div class="item wallet">
+              <div type="button" onclick="toggleHelp()" id="help">
+                <i class="fa-solid fa-headphones"></i>
+              </div>
+              <div class="sub-action">
+                <div class="top-action">
+                  <h3>To help</h3>
+                </div>
+                <ul>
+                  <li>
+                    <a href="./sanpham/index.html">
+                      <i class="fa-solid fa-phone-volume"></i>
+                      Hotline
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./sanpham/index.html">
+                      <i class="fa-regular fa-comment"></i>
+                      Live Chat
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./sanpham/index.html">
+                      <i class="fa-brands fa-facebook-messenger"></i>
+                      Messenger
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./sanpham/index.html">
+                      <i class="fa-regular fa-envelope"></i>
+                      Email
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./sanpham/index.html">
+                      <i class="fa-solid fa-receipt"></i>
+                      Look up orders
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="item wallet">
+              <a href="#">
+                <i class="fa-regular fa-user"></i>
+              </a>
+            </div>
+
+            <div class="item item-cart">
+              <div type="button" class="icon" href="#" onclick="openCart()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="number-cart">2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- main -->
+    <!--------order-->
+    <main id="main" class="site-main">
+      <div class="container">
+        <form action="" name="frm_cart" id="frm_cart">
+          <div class="cart pt-40 cart-page">
+            <div class="container__order row">
+              <div class="container__order-left col-lg-8">
+                <div class="checkout-process-bar block-border">
+                  <ul>
+                    <li class="active done">
+                      <span> Giỏ hàng </span>
+                    </li>
+                    <li class="active">
+                      <span> Đặt hàng </span>
+                    </li>
+                    <li>
+                      <span> Thanh toán </span>
+                    </li>
+                    <li>
+                      <span> Hoàn thành đơn </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="content__order">
+                  <div class="content__order-left">
+                    <div class="content__order-left-element">
+                      <h3 class="content__order-title">Địa chỉ giao hàng</h3>
+                      <button class="content__order-login"><a href="../login/index.html"> ĐĂNG NHẬP</a></button>
+                      <button class="content__order-signUp"><a href="../login/index.html">ĐĂNG Ký</a></button><br />
+                      <p class="content__order-msg">
+                        Đăng nhập/ Đăng ký tài khoản để được tích điểm và nhận thêm nhiều ưu đãi từ TNL Clothing.
+                      </p>
+                      <div class="form-container">
+                        <h3>
+                          <span> <i class="fa fa-check-circle" aria-hidden="true"></i> </span>Địa chỉ
+                        </h3>
+                        <div class="row">
+                          <div class="form-group col-md-6">
+                            <input type="text" class="form-control" placeholder="Họ và Tên" />
+                          </div>
+                          <div class="form-group col-md-6">
+                            <input type="text" class="form-control" placeholder="Số điện thoại" />
+                          </div>
+                          <div class="form-group col-md-6">
+                            <select id="city" class="form-control">
+                              <option value="" selected disabled value="-1">Tỉnh/ thành phố</option>
+                              <option value="">Hồ chí Minh</option>
+                              <option value="">Hà Nội</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <select id="district" class="form-control">
+                              <option selected disabled value="-1">Quận huyện</option>
+                              <option value="">Hồ chí Minh</option>
+                              <option value="">Hà Nội</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <select id="ward" class="form-control">
+                              <option selected disabled value="-1">Phường Xã</option>
+                              <option value="">Hồ chí Minh</option>
+                              <option value="">Hà Nội</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Địa chỉ" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content__order-right">
+                    <div class="content__order-right-element">
+                      <h3 class="content__order-title">Phương thức giao hàng</h3>
+                      <div class="content__order-box">
+                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        <span class="order-box-text">Chuyển phát nhanh</span>
+                      </div>
+                      <h3 class="content__order-right-msg-vat">Bạn có muốn nhận hoá đơn VAT không ?</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="checkout__payment-container">
+                  <h3>Phương thức thanh toán</h3>
+                  <div class="checkout__payment-box">
+                    <p>
+                      Mọi giao dịch đều được bảo mật và mã hóa. Thông tin thẻ tín dụng sẽ không bao giờ được lưu lại.
+                    </p>
+                    <div class="checkout__payment-option">
+                      <form action="" class="form_payment">
+                        <div class="field-payment">
+                          <input type="radio" name="selection" />
+                          <label for="">Thanh toán bằng thẻ tín dụng</label>
+                          <img src="../../assets/img/datmua/visa.png" alt="" /> <br />
+                        </div>
+                        <div class="field-payment">
+                          <input type="radio" name="selection" />
+                          <label for="">Thanh toán bằng thẻ ATM </label> <br />
+                          <span>Hỗ trợ thanh toán online hơn 38 ngân hàng</span>
+                        </div>
+                        <div class="field-payment">
+                          <input type="radio" name="selection" />
+                          <label for="">Thanh toán bằng Momo</label><br />
+                        </div>
+                        <div class="field-payment">
+                          <input type="radio" name="selection" />
+                          <label for="">Thanh toán khi giao hàng</label><br />
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="view-more">
+                  <button class="btn-view-more">Hiển thị sản phẩm</button>
+                </div>
+                <div class="view-more-cart">
+                  <div class="more-cart-list">
+                    <h3>Giỏ hàng của bạn</h3>
+                    <div class="row more-cart-tittle">
+                      <div class="col-5"><h4 class="tittle-more">TÊN SẢN PHẨM</h4></div>
+                      <div class="col-2"><h4 class="tittle-more">CHIẾT KHẤU</h4></div>
+                      <div class="col-2"><h4 class="tittle-more">SỐ LƯỢNG</h4></div>
+                      <div class="col-3 text-center"><h4 class="tittle-more">TỔNG TIỀN</h4></div>
+                    </div>
+                    <div class="row">
+                      <div class="col-5">
+                        <div class="cart-list-product">
+                          <div class="view-product-cart">
+                            <div class="img-product">
+                              <img src="../../assets/img/products/Đầm yếm nhẹ nhàng 1.jpg" alt="" />
+                            </div>
+                            <div class="view-info-product">
+                              <h4>Đầm yếm dài</h4>
+                              <p>Màu sắc: Xanh min <span> - Size: S</span></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <span class="chieukhau">-350.000đ</span>
+                      </div>
+                      <div class="col-2">
+                        <p class="quantity-product">1</p>
+                      </div>
+                      <div class="col-3 text-center">
+                        <span class="price-product">2.236.000đ</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container__order-right col-lg-4">
+                <div class="cart-summary-box">
+                  <div class="box_product_total">
+                    <div class="cart-summary__total">
+                      <h3>Tóm tắt đơn hàng</h3>
+                      <div class="cart-summary__total__item">
+                        <p>Tổng tiền hàng</p>
+                        <p>3.140.000đ</p>
+                      </div>
+                      <div class="cart-summary__total__item">
+                        <p>Tạm tính</p>
+                        <p>2.198.000đ</p>
+                      </div>
+                      <div class="cart-summary__total__item">
+                        <p>Phí vận chuyển</p>
+                        <p>38.000đ</p>
+                      </div>
+                      <div class="cart-summary__total__item">
+                        <p>Tiền thanh toán</p>
+                        <p><strong>2.236.000đ</strong></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cart-summary__voucher-form__title d-flex justify-content-around">
+                    <h4 class="active">Mã phiếu giảm giá</h4>
+                    <span></span>
+                    <h4 class="myVocher text-muted">Mã của tôi</h4>
+                  </div>
+                  <p id="coupon" style="padding-top: 5px; text-align: center; display: none"></p>
+                  <div class="row cart_coupon">
+                    <div class="form-group col-md-8">
+                      <input type="text" class="form-control" placeholder="Mã giảm giá" />
+                    </div>
+                    <div class="form-group col-md-4">
+                      <button class="btn btn-outline-dark button-appli">ÁP DỤNG</button>
+                    </div>
+                    <div class="form-group">
+                      <select class="form-select" name="" id="">
+                        <option value="" selected>Mã nhân viên hỗ trợ</option>
+                        <option value="">SA1</option>
+                        <option value="">SA2</option>
+                        <option value="">SA3</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-summary__button-bot">
+                  <button class="btn-outline-dark button-complete"><a href="../login/index.html">Tiếp tục thanh toán</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- site bottom -->
+    <div class="site-bottom">
+      <div class="container">
+        <div class="main-footer d-flex">
+          <!-- left footer -->
+          <div class="left-footer">
+            <div class="top-left">
+              <div class="logo-footer">
+                <a href="#">
+                  <img src="../../assets/img/logo/5_preview_rev_1 (1).png" alt="logo" />
+                </a>
+              </div>
+
+              <a href="#" class="dmca-badge">
+                <img
+                  src="../../assets/img/logo/dmca_protected_16_120.png"
+                  alt=""
+                  style="width: 90%; object-position: center"
+                />
+              </a>
+
+              <div class="logo-conthuong">
+                <a href="#">
+                  <img src="../../assets/img/logo/img-congthuong.png" alt="congthuong" />
+                </a>
+              </div>
+            </div>
+
+            <div class="content-left-ft content-ft">
+              <div class="info-left-ft">
+                <p>Công ty Cổ phần Dự Kim với số đăng ký kinh doanh: 0105777650</p>
+
+                <p><strong>Địa chỉ đăng ký:</strong> 123 Đường số 14, Phường 8, Quận Gò Vấp, TPHCM, Việt Nam</p>
+
+                <p><strong>Số điện thoại:</strong> 0243 205 2222/ 090 589 8683</p>
+
+                <p><strong>Email:</strong> cskh@tnlclothing.com.vn</p>
+              </div>
+            </div>
+
+            <ul class="list-social">
+              <li>
+                <a href="#">
+                  <img src="../../assets/img/icon/ic_fb.svg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../../assets/img/icon/ic_gg.svg" alt="" />
+                </a>
+              </li>
+              <li style="width: 30px; height: 30px">
+                <a href="#">
+                  <img src="../../assets/img/icon/ic_instagram.svg" alt="" />
+                </a>
+              </li>
+              <li style="width: 30px; height: 30px">
+                <a href="#">
+                  <img src="../../assets/img/icon/ic_pinterest.svg" alt="" />
+                </a>
+              </li>
+              <li style="width: 30px; height: 30px">
+                <a href="#">
+                  <img src="../../assets/img/icon/ic_ytb.svg" alt="" />
+                </a>
+              </li>
+            </ul>
+
+            <div class="hotline">
+              <a href="#"> HOTLINE: 0246 662 3434 </a>
+            </div>
+          </div>
+
+          <!-- center footer -->
+          <div class="center-footer d-flex">
+            <div class="left-center-ft item-center-ft">
+              <p class="title-footer">Giới thiệu</p>
+              <ul>
+                <li>
+                  <a href="#"> Về TNL Clothing </a>
+                </li>
+                <li>
+                  <a href="#"> Tuyển dụng </a>
+                </li>
+                <li>
+                  <a href="#"> Hệ thống cửa hàng </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="main-center-ft item-center-ft">
+              <p class="title-footer">Dịch vụ khách hàng</p>
+              <ul>
+                <li>
+                  <a href="#">Chính sách điều khoản</a>
+                </li>
+                <li>
+                  <a href="#">Hướng dẫn mua hàng</a>
+                </li>
+                <li>
+                  <a href="#">Chính sách thanh toán</a>
+                </li>
+                <li>
+                  <a href="#">Chính sách đổi trả</a>
+                </li>
+                <li>
+                  <a href="#">Chính sách bảo hành</a>
+                </li>
+                <li>
+                  <a href="#">Chính sách giao nhận vận chuyển</a>
+                </li>
+                <li>
+                  <a href="#">Chính sách thẻ thành viên</a>
+                </li>
+                <li>
+                  <a href="#">Hệ thống cửa hàng</a>
+                </li>
+                <li>
+                  <a href="#">Q&amp;A</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="right-center-ft item-center-ft">
+              <p class="title-footer">Liên hệ</p>
+              <ul>
+                <li>
+                  <a href="#">Hotline</a>
+                </li>
+                <li>
+                  <a href="#">Email</a>
+                </li>
+                <li>
+                  <a href="#">Live Chat</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">Messenger</a>
+                </li>
+                <li>
+                  <a href="#">Liên hệ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- right footer -->
+          <div class="right-footer">
+            <div class="register-form">
+              <p class="title-footer">Nhận thông tin các chương trình của TNL Clothing</p>
+
+              <form action="" id="frm_subscribe">
+                <input
+                  id="email_subscribe"
+                  type="text"
+                  name="email"
+                  placeholder="Nhập địa chỉ email"
+                  required="required"
+                />
+                <div class="btn-submit">
+                  <input id="btn-submit" class="form-submit" value="Đăng ký" type="submit" />
+                </div>
+              </form>
+            </div>
+
+            <div class="info-right-ft">
+             
+              <ul>
+                <li>
+                  <a href="#">
+                    <img src="../../assets/img/logo/appstore.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="../../assets/img/logo/googleplay.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- site footer -->
+    <footer id="footer" class="site-footer">
+      <div class="container">
+        <div class="copy-right">©TNL ClothingAll rights reserved</div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+
+    <script src="../../js/order.js"></script>
+  </body>
+</html>
