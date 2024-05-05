@@ -1,0 +1,112 @@
+<!DOCTYPE htmL>
+<html tang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="wïidth=device-width, initiaL-scaLe=1.0">
+<title>Gallery</title>
+<Link ret="styLesheet" href="https: //cdnJjs.cLoudftare.com/aJjax/Libs/font-
+awesome/6.5.1/css/aLL.min.css">
+<Link ret="styLesheet" href="anh_move.css">
+</head>
+<body>
+    <div class="slider">
+        <div class="slide-track">
+          <div class="slide">
+            <img src="img/cánh cụt.jpg" height="300" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/cậu bé.jpg" height="300" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/chim ngộ nghĩnh.jpg" height="300" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/chó tập yoga.jpg" height="300" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/chó.jpg" height="300" width="250" alt="" />
+          </div>
+        </div>
+      </div>
+      <style>
+        .slider {
+  height: 100px;
+  margin: auto;
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 18);
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 9));
+  }
+}
+
+.slide {
+  height: 200px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+}
+      </style>
+
+<script>
+const slider = document.querySelector('.slider');
+const slideTrack = document.querySelector('.slide-track');
+const slides = Array.from(slideTrack.querySelectorAll('.slide'));
+
+let isAnimating = false;
+let currentSlide = 0;
+const centerX = window.innerWidth / 2;
+const centerY = window.innerHeight / 2;
+
+function resetAnimation() {
+  slides.forEach((slide, index) => {
+    slide.style.transform = `translateX(${(index - currentSlide) * 100}%)`;
+    slide.style.filter = index === currentSlide ? 'none' : 'blur(5px)';
+    slide.style.transition = 'transform 0.5s ease-in-out';
+    slide.style.zIndex = index === currentSlide ? '1' : '0';
+  });
+}
+
+function animateSlide() {
+  if (isAnimating) return;
+  isAnimating = true;
+
+  const currentSlideElement = slides[currentSlide];
+  currentSlideElement.style.transform = `translateX(-${centerX}px) translateY(-${centerY}px) scale(1.5)`;
+  currentSlideElement.style.filter = 'none';
+
+  slides.forEach((slide, index) => {
+    if (index !== currentSlide) {
+      slide.style.transform = `translateX(${index > currentSlide ? 100 : -100}%)`;
+      slide.style.filter = 'blur(5px)';
+    }
+  });
+
+  setTimeout(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    resetAnimation();
+    isAnimating = false;
+  }, 3000);
+}
+
+resetAnimation();
+setInterval(animateSlide, 5000);
+</script>
+</body>
+</html>
