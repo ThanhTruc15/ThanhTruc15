@@ -1,112 +1,141 @@
-<!DOCTYPE htmL>
-<html tang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="wïidth=device-width, initiaL-scaLe=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gallery</title>
-<Link ret="styLesheet" href="https: //cdnJjs.cLoudftare.com/aJjax/Libs/font-
-awesome/6.5.1/css/aLL.min.css">
-<Link ret="styLesheet" href="anh_move.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  .slider {
+    height: 400px; /* Chiều cao mong muốn của slider */
+    margin-top: 100px; /* Đẩy phần trên xuống dưới */
+    margin-bottom: auto; /* Đẩy phần dưới lên trên */
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: grid; /* Sử dụng grid để căn giữa */
+    align-items: center; /* Căn giữa theo chiều dọc */
+  }
+
+  .slide-track {
+    display: flex;
+    width: calc(250px * 18); /* Độ rộng của toàn bộ nội dung cuộn */
+    animation: scroll 40s linear infinite; /* Cuộn tự động */
+    justify-content: center; /* Căn giữa các phần tử slide */
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 9)); /* Di chuyển toàn bộ nội dung 18 ảnh */
+    }
+  }
+
+  .slide {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+    transition: transform 0.5s ease-in-out, filter 0.5s ease;
+    position: relative; /* Đặt vị trí tương đối để có thể sử dụng z-index */
+    z-index: 1; /* Ẩn ảnh khi chưa được hiển thị */
+    margin-right: 300px; /* Khoảng cách giữa các ảnh */
+  }
+
+  .slide img {
+    width: 100%; /* Đảm bảo ảnh lấp đầy slide */
+    height: 100%; /* Đảm bảo ảnh lấp đầy slide */
+    object-fit: cover; /* Đảm bảo hình ảnh không bị vặn khi thu phóng */
+  }
+
+  .slide:not(.active) img {
+    filter: blur(5px); /* Loại bỏ hiệu ứng mờ cho ảnh không phải là ảnh hiện tại */
+  }
+
+  .active {
+    transform: translate(-50%, -50%) scale(1.5); /* Hiển thị ảnh hiện tại lớn lên */
+    z-index: 2; /* Đảm bảo ảnh hiển thị ở trên cùng */
+    filter: none; /* Loại bỏ hiệu ứng mờ */
+  }
+</style>
 </head>
 <body>
-    <div class="slider">
-        <div class="slide-track">
-          <div class="slide">
-            <img src="img/cánh cụt.jpg" height="300" width="250" alt="" />
-          </div>
-          <div class="slide">
-            <img src="img/cậu bé.jpg" height="300" width="250" alt="" />
-          </div>
-          <div class="slide">
-            <img src="img/chim ngộ nghĩnh.jpg" height="300" width="250" alt="" />
-          </div>
-          <div class="slide">
-            <img src="img/chó tập yoga.jpg" height="300" width="250" alt="" />
-          </div>
-          <div class="slide">
-            <img src="img/chó.jpg" height="300" width="250" alt="" />
-          </div>
-        </div>
+<div class="slider">
+    <div class="slide-track">
+      <div class="slide active">
+        <img src="img/cánh cụt.jpg" height="400" width="250" alt="" />
       </div>
-      <style>
-        .slider {
-  height: 100px;
-  margin: auto;
-  position: relative;
-  width: 100%;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-}
+      <div class="slide">
+        <img src="img/cậu bé.jpg" height="400" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="img/chim ngộ nghĩnh.jpg" height="400" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="img/chó tập yoga.jpg" height="400" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="img/thỏ nn.jpg" height="400" width="250" alt="" />
+      </div>
+    </div>
+  </div>
 
-.slide-track {
-  display: flex;
-  width: calc(250px * 18);
-  animation: scroll 40s linear infinite;
-}
+  <script>
+    const slider = document.querySelector('.slider');
+    const slideTrack = document.querySelector('.slide-track');
+    const slides = Array.from(slideTrack.querySelectorAll('.slide'));
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-250px * 9));
-  }
-}
+    let isAnimating = false;
+    let currentSlide = 0;
 
-.slide {
-  height: 200px;
-  width: 250px;
-  display: flex;
-  align-items: center;
-  padding: 15px;
-  perspective: 100px;
-}
-      </style>
-
-<script>
-const slider = document.querySelector('.slider');
-const slideTrack = document.querySelector('.slide-track');
-const slides = Array.from(slideTrack.querySelectorAll('.slide'));
-
-let isAnimating = false;
-let currentSlide = 0;
-const centerX = window.innerWidth / 2;
-const centerY = window.innerHeight / 2;
-
-function resetAnimation() {
-  slides.forEach((slide, index) => {
-    slide.style.transform = `translateX(${(index - currentSlide) * 100}%)`;
-    slide.style.filter = index === currentSlide ? 'none' : 'blur(5px)';
-    slide.style.transition = 'transform 0.5s ease-in-out';
-    slide.style.zIndex = index === currentSlide ? '1' : '0';
-  });
-}
-
-function animateSlide() {
-  if (isAnimating) return;
-  isAnimating = true;
-
-  const currentSlideElement = slides[currentSlide];
-  currentSlideElement.style.transform = `translateX(-${centerX}px) translateY(-${centerY}px) scale(1.5)`;
-  currentSlideElement.style.filter = 'none';
-
-  slides.forEach((slide, index) => {
-    if (index !== currentSlide) {
-      slide.style.transform = `translateX(${index > currentSlide ? 100 : -100}%)`;
-      slide.style.filter = 'blur(5px)';
+    function resetAnimation() {
+      slides.forEach((slide, index) => {
+        if (index === currentSlide) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
     }
-  });
 
-  setTimeout(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
+    function animateSlide() {
+      if (isAnimating) return;
+      isAnimating = true;
+
+      // Tính toán vị trí giữa của slider
+      const sliderRect = slider.getBoundingClientRect();
+      const sliderCenterX = sliderRect.left + sliderRect.width / 2;
+
+      // Tìm slide nào gần vị trí giữa nhất
+      let closestSlide = slides[0];
+      let closestDistance = Math.abs(sliderCenterX - closestSlide.getBoundingClientRect().left);
+      slides.forEach((slide) => {
+        const distance = Math.abs(sliderCenterX - slide.getBoundingClientRect().left);
+        if (distance < closestDistance) {
+          closestSlide = slide;
+          closestDistance = distance;
+        }
+      });
+
+      // Kích hoạt hiệu ứng phóng to và làm mờ cho slide đó
+      closestSlide.classList.add('active');
+      slides.forEach((slide) => {
+        if (slide !== closestSlide) {
+          slide.classList.remove('active');
+        }
+      });
+
+      setTimeout(() => {
+        isAnimating = false;
+      }, 2000); // Điều chỉnh thời gian phóng to
+    }
+
     resetAnimation();
-    isAnimating = false;
-  }, 3000);
-}
-
-resetAnimation();
-setInterval(animateSlide, 5000);
-</script>
+    setInterval(animateSlide, 5000); // Điều chỉnh khoảng thời gian chuyển đổi
+  </script>
 </body>
 </html>
